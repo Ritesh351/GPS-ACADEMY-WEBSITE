@@ -12,8 +12,8 @@ const Contact: React.FC = () => {
     const formData = new FormData(e.currentTarget);
     
     try {
-      // Using FormSubmit.co ajax endpoint to send email without a backend
-      const response = await fetch("https://formsubmit.co/ajax/gpsacademy25@gmail.com", {
+      // Sending data to your Formspree endpoint
+      const response = await fetch("https://formspree.io/f/xpqjznar", {
         method: "POST",
         body: formData,
         headers: { 
@@ -21,12 +21,11 @@ const Contact: React.FC = () => {
         }
       });
       
-      const data = await response.json();
-
-      if (response.ok && data.success === "true") {
+      if (response.ok) {
         setFormStatus('success');
         (e.target as HTMLFormElement).reset();
       } else {
+        const data = await response.json();
         console.error("Form submission failed:", data);
         setFormStatus('error');
       }
@@ -144,11 +143,6 @@ const Contact: React.FC = () => {
               </div>
             ) : (
               <form className="space-y-6" onSubmit={handleSubmit}>
-                {/* Configuration inputs for FormSubmit */}
-                <input type="hidden" name="_subject" value="New Inquiry from GPS Academy Website" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="student_name" className="block text-sm font-medium text-slate-700 mb-2">Student Name</label>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Heart, Eye } from 'lucide-react';
+import { Target, Heart, Eye, Quote } from 'lucide-react';
 import { SCHOOL_INFO, IMAGES } from '../constants';
 
 const About: React.FC = () => {
@@ -56,32 +56,74 @@ const About: React.FC = () => {
             </div>
          </div>
 
-         {/* Principal's Message Section */}
-         <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-1/3 bg-slate-200 min-h-[300px] relative">
-               <img 
-                 src={IMAGES.principal}
-                 alt="Principal" 
-                 className="absolute inset-0 w-full h-full object-cover"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                 <div className="text-white">
-                   <h3 className="font-bold text-xl">Principal's Desk</h3>
-                   <p className="text-sm opacity-90">GPS Academy</p>
+         {/* Leadership Section */}
+         <div className="space-y-12">
+            
+            {/* Director's Message - Image Right, Text Left */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col-reverse md:flex-row border-l-8 border-gps-gold">
+              <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                   <Quote className="text-gps-goldDark transform rotate-180" size={32} />
+                   <h3 className="text-2xl font-bold text-gps-navy">Director's Message</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <p className="text-slate-600 text-lg leading-relaxed italic">
+                    "प्रिय अभिभावकों और विद्यार्थियों,
+                    <br/><br/>
+                    शिक्षा केवल डिग्रियों तक सीमित नहीं है, यह चरित्र निर्माण की नींव है। जी.पी.एस. अकादमी में, हम आशा और ज्ञान के बीज बोते हैं। हम वादा करते हैं कि हम आपके बच्चों को अपने बच्चों की तरह संवारेंगे, और उन्हें एक सफल पेशेवर ही नहीं, बल्कि एक संवेदनशील इंसान बनाएंगे। आइए, हम सब मिलकर एक उज्ज्वल भविष्य का निर्माण करें।"
+                  </p>
+                  <div className="w-12 h-1 bg-slate-200"></div>
+                  <p className="text-slate-600 text-lg leading-relaxed">
+                    "Education is not just about academic success; it is about building the foundation of character. At GPS Academy, we plant seeds of hope and wisdom. We promise to nurture your children as our own, guiding them to become not just successful professionals, but compassionate human beings. Let us work together to build a brighter future."
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-slate-100">
+                  <div className="font-bold text-xl text-gps-navy">Rajkumar Gupta</div>
+                  <div className="text-slate-500 font-semibold">Director, GPS Academy</div>
+                </div>
+              </div>
+
+              <div className="md:w-1/3 bg-slate-100 min-h-[300px] relative group">
+                 <img 
+                   src={IMAGES.director}
+                   alt="Rajkumar Gupta - Director" 
+                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-gps-navy/60 to-transparent flex items-end p-6">
                  </div>
-               </div>
-            </div>
-            <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-gps-navy mb-4">Message from the Principal</h3>
-              <p className="text-slate-600 italic mb-6 text-lg">
-                "Welcome to GPS Academy. Our school is a vibrant community of learners where each day is an opportunity to grow. 
-                We are committed to providing an education that goes beyond textbooks, focusing on the character and skills 
-                needed for the 21st century. Join us in this journey from darkness to light."
-              </p>
-              <div className="font-bold text-gps-navy">
-                - Principal Name
               </div>
             </div>
+
+            {/* Principal's Message - Image Left, Text Right */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row border-l-8 border-gps-navy">
+              <div className="md:w-1/3 bg-slate-200 min-h-[300px] relative group">
+                 <img 
+                   src={IMAGES.principal}
+                   alt="Principal" 
+                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-gps-navy/60 to-transparent flex items-end p-6">
+                 </div>
+              </div>
+              <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                   <Quote className="text-gps-navy transform rotate-180" size={32} />
+                   <h3 className="text-2xl font-bold text-gps-navy">Message from the Principal</h3>
+                </div>
+                <p className="text-slate-600 italic mb-6 text-lg leading-relaxed">
+                  "Welcome to GPS Academy. Our school is a vibrant community of learners where each day is an opportunity to grow. 
+                  We are committed to providing an education that goes beyond textbooks, focusing on the character and skills 
+                  needed for the 21st century. Join us in this journey from darkness to light."
+                </p>
+                <div className="font-bold text-xl text-gps-navy">
+                  Abha Shukla
+                </div>
+                <div className="text-slate-500 font-semibold">Principal</div>
+              </div>
+            </div>
+
          </div>
 
        </div>
