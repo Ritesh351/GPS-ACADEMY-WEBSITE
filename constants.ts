@@ -48,8 +48,9 @@ export const IMAGES = {
   homeIntro1: "https://drive.google.com/thumbnail?id=1VoILINzXbkpkOOFxEnnm745UuVqzeRFV&sz=w1000",
   homeIntro2: "https://drive.google.com/thumbnail?id=1nkDz4IErWRavQg3bppejzPZ74Z1zc4wt&sz=w1000",
   
-  // Principal Image for About Page
-  principal: "https://drive.google.com/thumbnail?id=1rvmmMbAK7sVreZLQfc_hwrgblzXP79O_&sz=w1000",
+  // Leadership Images
+  principal: "https://drive.google.com/thumbnail?id=1LeVSgy6-fB0_Ei_X9TS-IP9oGXR39CwQ&sz=w1000",
+  director: "https://drive.google.com/thumbnail?id=1hYeRG6F5AlE9R_3o7xGCgT44NBHoSO52&sz=w1000",
   
   // Gallery Strip Images
   gallery: [
